@@ -12,5 +12,6 @@ fn main() {
         })
         .collect();
     calories.sort_by(|a, b| b.cmp(a));
-    println!("{:?}", calories[0] + calories[1] + calories[2]);
+    let result: i32 = (&calories[0..3]).into_iter().sum();
+    println!("{:?}", result);
 }
